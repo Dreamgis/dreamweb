@@ -1,13 +1,15 @@
 @import url("https://fonts.cdnfonts.com/css/arima-madurai");
 @import url("https://fonts.cdnfonts.com/css/bahiana");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
   /* outline: var(--raya); */
-  font-weight: 200;
-  font-family: "Arima Madurai", sans-serif;
+  font-weight: 400;
+  /* font-family: "Arima Madurai", sans-serif; */
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -15,13 +17,25 @@ html {
 }
 
 :root {
+  --morado: #694F96;
+  --verde-dream: #A0C250;
+  --amarillo: #F5CB56;
+  --azul: #477ABB;
+  --naranja: #D85C30;
   --blanco: #fff;
+  --gris-texto: rgb(74, 74, 74);
   --negro: #000000;
   --salmon: #ec6568;
   --verde: #05adbf;
   --blanco_sombra: rgb(212, 211, 211);
   --gris: #d9d9d9;
   --raya: 3px solid #ff0000;
+  --title-weight: 700;
+  --title-size: 25pt;
+  --subtitle-weight: 700;
+  --subtitle-size: 20pt;
+  --normal-text-weight: 400;
+  --normal-text-size: 15pt;
 }
 
 body {
@@ -37,17 +51,24 @@ nav {
 }
 
 .img-nav {
-  height: 40px;
-  display: none;
+  height: 50px;
+  border-radius: .2em;
+  padding: 0.4em;
+  background-color: var(--blanco);
 }
 
 .nav-color-custom {
-  background-color: var(--verde);
-  color: var(--blanco);
+  background-color: var(--blanco);
+  color: var(--verde);
+}
+
+.row-width-nav {
+  width: 100%;
 }
 
 .row-width {
   width: 100%;
+  padding: 2em;
 }
 /*---------------------------------------------header--------------------------------------------*/
 
@@ -87,8 +108,8 @@ header .navegacion {
   text-transform: uppercase;
   display: flow-root;
 }
-.navbar-verde {
-  background-color: var(--verde);
+.navbar-custom-color {
+  background-color: var(--azul);
 }
 .nav-icon-color {
   color: var(--blanco);
@@ -98,7 +119,12 @@ header .navegacion {
   /* display: flow-root !important; */
 }
 .nav-link {
-  color: var(--blanco);
+  color: var(--verde);
+  font-weight: var(--subtitle-weight);
+}
+
+.nav-link:hover {
+  color: var(--verde-dream)
 }
 .nav-shadow {
   filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.7));
@@ -205,6 +231,11 @@ header .marco .marco_interno .cuadro a {
   width: auto;
 }
 
+.paragraph {
+  margin: 1em;
+  font-size: var(--normal-text-size);
+}
+
 .img-pagos {
   /* height: 20%; */
   margin: auto;
@@ -268,6 +299,17 @@ form h2 {
 .h1-bahiana {
   font-family: "Bahiana", sans-serif;
 }
+
+.homeRow {
+    font-size: var(--normal-text-size);
+    font-weight: var(--normal-text-weight);
+    color: var(--gris-texto);
+  }
+
+#section_aliados {
+  background-color: var(--verde-dream);
+}
+
 /*---------------------------------------------footer--------------------------------------------*/
 
 footer {
@@ -290,66 +332,6 @@ footer p {
 footer a {
   color:var(--blanco);
   text-decoration: none;
-}
-/**------------------------------------page-turismo----------------------------------*/
-
-#section-tierra {
-  margin-top: 8%;
-}
-#section-aereo {
-  background-color: var(--verde);
-  padding-bottom: 6%;
-}
-
-#section-aereo h1 {
-  color: var(--blanco);
-  margin-top: revert;
-}
-
-.p-col-4 {
-  font-size: 35px;
-}
-.width-plan{
-  width: 30%;
-}
-
-/*-------------------------------page-pasadias---------------------------------------*/
-
-#pasadias_destino {
-  background-color: var(--salmon);
-  color: var(--blanco);
-  padding-top: 6%;
-}
-.img-pasadias-dest {
-  background-color: var(--salmon);
-}
-.bckgnd-pasadia-form {
-  background-color: var(--gris);
-  padding: 7% 0;
-  /* opacity: 0.2; */
-}
-#pasadias_form form {
-  background-color: var(--gris);
-}
-
-#pasadias_form h1 {
-  color: var(--verde);
-  margin-bottom: 30%;
-}
-
-.form-pasadias-padding {
-  padding: 4% 6%;
-}
-
-.row-margin {
-  margin: 5% 0%;
-}
-.pasadias-font {
-  font-size: 30px;
-}
-
-.row-margin-top {
-  margin-top: 5%;
 }
 
 /**--------------------------page nosotros------------------------*/
@@ -527,7 +509,12 @@ footer a {
   #section_1 button {
     font-size: 0.8rem;
   }
-  #section_pagos h1 {
+
+  #section_aliados {
+    margin-top: 2em;
+  }
+
+  #section_aliados h1 {
     font-size: 1rem;
   }
   .inv-heigth {
