@@ -24,6 +24,7 @@ html {
   --naranja: #D85C30;
   --blanco: #fff;
   --gris-texto: rgb(74, 74, 74);
+  --negro-section: #020914;
   --negro: #000000;
   --salmon: #ec6568;
   --verde: #05adbf;
@@ -109,7 +110,7 @@ header .navegacion {
   display: flow-root;
 }
 .navbar-custom-color {
-  background-color: var(--azul);
+  background-color: var(--blanco);
 }
 .nav-icon-color {
   color: var(--blanco);
@@ -300,11 +301,48 @@ form h2 {
   font-family: "Bahiana", sans-serif;
 }
 
+.blackSection {
+  border-radius: 30% 30% 0 0;
+  background-color: var(--negro-section);
+}
+
+.blackSectionBottom {
+  border-radius: 0 0 90% 90%;
+  background-color: var(--negro-section);
+}
+
 .homeRow {
-    font-size: var(--normal-text-size);
-    font-weight: var(--normal-text-weight);
-    color: var(--gris-texto);
-  }
+  font-size: var(--normal-text-size);
+  font-weight: var(--normal-text-weight);
+  color: var(--gris-texto);
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.roundImage {
+  border-radius: 50% 0 0 50%;
+}
+
+.centeredColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  padding-top: 3em;
+}
+
+.centeredColumn h1{
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: var(--blanco);
+}
+.centeredColumn h3{
+  font-size: var(--normal-text-size);
+  font-weight: var(--normal-text-weight);
+  color: var(--verde-dream);
+}
+
 
 #section_aliados {
   background-color: var(--verde-dream);
