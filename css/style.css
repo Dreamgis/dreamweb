@@ -37,6 +37,7 @@ html {
   --subtitle-size: 20pt;
   --normal-text-weight: 400;
   --normal-text-size: 15pt;
+  --small-text-size: 10pt;
 }
 
 body {
@@ -69,7 +70,6 @@ nav {
 
 .row-width {
   width: 100%;
-  padding: 2em;
 }
 /*---------------------------------------------header--------------------------------------------*/
 
@@ -213,6 +213,9 @@ header .marco .marco_interno .cuadro a {
 }
 
 /*---------------------------------------------section--------------------------------------------*/
+.logoDream {
+  padding: 2em;
+}
 
 .caja-h1 {
   text-align: center;
@@ -230,11 +233,6 @@ header .marco .marco_interno .cuadro a {
 .img-sol {
   height: inherit;
   width: auto;
-}
-
-.paragraph {
-  margin: 1em;
-  font-size: var(--normal-text-size);
 }
 
 .img-pagos {
@@ -302,12 +300,12 @@ form h2 {
 }
 
 .blackSection {
+  height: 20vh;
   border-radius: 30% 30% 0 0;
   background-color: var(--negro-section);
 }
 
 .blackSectionBottom {
-  border-radius: 0 0 90% 90%;
   background-color: var(--negro-section);
 }
 
@@ -328,48 +326,112 @@ form h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em;
-  padding-top: 3em;
+  padding: 1em;
+  margin-top: 5em;
 }
 
 .centeredColumn h1{
   font-size: var(--title-size);
   font-weight: var(--title-weight);
-  color: var(--blanco);
+  color: var(--amarillo);
+  text-align: center;
 }
-.centeredColumn h3{
+
+.centeredColumnText{
+  font-size: var(--normal-text-size);
+  font-weight: var(--normal-text-weight);
+  color: var(--blanco);
+  text-align: center;
+}
+
+.centeredColumnBottom{
   font-size: var(--normal-text-size);
   font-weight: var(--normal-text-weight);
   color: var(--verde-dream);
+  text-align: center;
 }
 
 
 #section_aliados {
+  margin-top: 15em;
+  margin-bottom: 15em;
+  background-color: var(--blanco);
+}
+
+.texto_aliados {
   background-color: var(--verde-dream);
+  margin-bottom: 5em;
+  margin-top: 5em;
+}
+
+.logos_aliados {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row>* {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.paragraph {
+  padding: 3em;
+  font-size: var(--normal-text-size);
+}
+
+.white-text {
+  color: var(--blanco);
+}
+
+#contactSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.experienceDescription {
+  color: var(--blanco);
+  width: 70%;
+  padding: 5em;
+  font-size: var(--subtitle-size);
+  font-weight: var(--subtitle-weight);
+  background: var(--morado);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 /*---------------------------------------------footer--------------------------------------------*/
 
 footer {
-  background-color: var(--salmon);
-  color: var(--blanco);
+  background-color: var(--blanco);
+  color: var(--negro);
   padding-top: 1%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 
-footer h3 {
-  font-size: 24px;
-}
-
-footer p {
-  padding-right: 50px;
-}
-.icono-footer {
-  height: 60px;
-  margin: 3%;
-}
-footer a {
-  color:var(--blanco);
-  text-decoration: none;
+.footerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /**--------------------------page nosotros------------------------*/
@@ -499,6 +561,9 @@ footer a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   /* CSS */
+  .experienceDescription {
+    font-size: var(--normal-text-size);
+  }
 }
 
 /* 
@@ -508,6 +573,9 @@ footer a {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* CSS */
+  .experienceDescription {
+    font-size: var(--small-text-size);
+  }
 }
 
 /* 
@@ -517,6 +585,24 @@ footer a {
 
 @media (min-width: 481px) and (max-width: 767px) {
   /* CSS */
+  .centeredColumn h1{
+    font-size: var(--normal-text-size);
+  }
+  .centeredColumnText{
+    font-size: var(--small-text-size);
+  }
+  #section_aliados img {
+    padding: 2em;
+  }
+  .logoDream {
+    padding: 2em;
+  }
+  .experienceDescription {
+    font-size: var(--small-text-size);
+  }
+  .footerRow {
+    justify-content: center;
+  }
 }
 
 /* 
@@ -526,6 +612,10 @@ footer a {
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* CSS */
+  .logoDream {
+    padding: 2em;
+  }
+
   .icono-footer {
     height: 22px;
     margin: 4%;
@@ -555,6 +645,11 @@ footer a {
   #section_aliados h1 {
     font-size: 1rem;
   }
+
+  #section_aliados img {
+    padding: 2em;
+  }
+
   .inv-heigth {
     height: 100px;
   }
@@ -584,5 +679,22 @@ footer a {
 
   .bckgnd-form-contacto {
     background-position: right;
+  }
+
+  .centeredColumnText{
+    font-size: var(--small-text-size);
+  }
+
+  .centeredColumn h1{
+    font-size: var(--normal-text-size);
+  }
+
+  .experienceDescription {
+    font-size: var(--small-text-size);
+    font-weight: var(--subtitle-weight);
+  }
+
+  .footerRow {
+    justify-content: center;
   }
 }
