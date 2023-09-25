@@ -14,6 +14,8 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal@4"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -108,7 +110,8 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-around blackSection">
+    <div class="row justify-content-around blackSection" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
       <div class="col-sm-10 col-md-10 col-lg-8">
         <div class="centeredColumn">
           <h1> Tecnología a su disposición</h1>
@@ -119,13 +122,14 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-around">
+    <div class="row justify-content-around" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
       <div class="col-12">
         <img src="img/sectiondivider.png" class="img-fluid" srcset="" />
       </div>
     </div>
     <div class="row justify-content-around homeRow">
-      <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-down-right">
         <div class="centered-content">
           <div class="paragraph">
             Conscientes de los múltiples desafíos que enfrentan las organizaciones
@@ -136,7 +140,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-down-left">
         <img src="img/picked.png" class="img-fluid roundImage" srcset="" />
       </div>
     </div>
@@ -144,14 +148,20 @@
 
   <!---------------------------------------------section aliados------------------------------------------------->
   <section id="section_aliados">
-    <div class="row text-center row-width texto_aliados">
+    <div class="row text-center row-width texto_aliados"
+      data-aos="fade-right"
+      data-aos-offset="500"
+      data-aos-easing="ease-in-sine">
       <div class="paragraph white-text">
         Contamos con aliados internacionales como <b>Earth Big Data</b>, <b>Safe Software</b> y <b>ConTerra</b> nuestro aliado europeo.
         También somos socios de Negocio de <b>Esri Colombia</b> el distribuidor colombiano de la <b>mejor
         plataforma SIG</b> que existe en el mercado <b>ArcGIS</b>. 
       </div>
     </div>
-    <div class="row justify-content-around align-items-center row-width logos_aliados">
+    <div class="row justify-content-around align-items-center row-width logos_aliados"
+      data-aos="fade"
+      data-aos-offset="500"
+      data-aos-easing="ease-in-sine">
       <div class="col-sm-6 col-md-6 col-lg-2">
         <img class="img-fluid img-pagos" src="img/logo-earth-big-data.png" alt="Earth Big Data" srcset="" />
       </div>
@@ -165,7 +175,10 @@
         <img class="img-fluid img-pagos" src="img/logo-safe-software.png" alt="nequi" srcset="" />
       </div>
     </div>
-    <div class="row justify-content-around align-items-center row-width logos_aliados">
+    <div class="row justify-content-around align-items-center row-width logos_aliados"
+      data-aos="fade"
+      data-aos-offset="500"
+      data-aos-easing="ease-in-sine">
       <div class="col-sm-6 col-md-6 col-lg-2">
         <img class="img-fluid img-pagos" src="img/logo-vertigis.svg" alt="nequi" srcset="" />
       </div>
@@ -176,7 +189,10 @@
         <img class="img-fluid img-pagos" src="img/logo-vertigis-studio.svg" alt="nequi" srcset="" />
       </div>
     </div>
-    <div class="row text-center row-width texto_aliados">
+    <div class="row text-center row-width texto_aliados"
+      data-aos="fade-left"
+      data-aos-offset="500"
+      data-aos-easing="ease-in-sine">
       <div class="paragraph white-text">
         Además somos distribuidores oficiales de las soluciónes de integración <b>Geocortex</b> una potente plataforma web y
         <b>FME</b>  desarrolladas por <b>VertiGIS</b> que le permite sacar todo el provecho a su <b>ArcGIS Enterprise</b> y
@@ -184,7 +200,9 @@
       </div>
     </div>
   </section>
-  <section id="contactSection">
+  <section id="contactSection"
+      data-aos="fade"
+      data-aos-offset="500">
     <div class="container">
       <div class="row row-width">
         <img class="img-fluid" src="img/slider5.png" alt="">
@@ -217,6 +235,9 @@
 		ScrollReveal().reveal('header', {delay: 200});
 		ScrollReveal().reveal('#section_1', {delay: 300});
 	</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
