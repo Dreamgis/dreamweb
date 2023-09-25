@@ -410,12 +410,21 @@ form h2 {
 
 .experienceDescription {
   color: var(--blanco);
-  width: 70%;
+  width: 100%;
   padding: 5em;
   font-size: var(--subtitle-size);
   font-weight: var(--subtitle-weight);
   background: var(--morado);
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.contactButton {
+  background-color: var(--gris);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*---------------------------------------------footer--------------------------------------------*/
